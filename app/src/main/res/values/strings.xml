@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Drapeau</string>
+    <string name="drapeau1">Afrique du sud</string>
+    <string name="drapeau2">Allemagne</string>
+    <string name="drapeau3">Angola</string>
+    <string name="drapeau4">Congo RDC</string>
+    <string name="drapeau5">Brésil</string>
+    <string name="drapeau6">Bulgarie</string>
+    <string name="drapeau7">Cameroun</string>
+    <string name="drapeau8">Canada</string>
+    <string name="drapeau9">Etats Unis d\'amerique</string>
+    <string name="drapeau10">Gabon</string>
+    <string name="drapeau11">Ghana</string>
+    <string name="drapeau12">Japon</string>
+    <string name="drapeau13">Kenya</string>
+    <string name="drapeau14">Mali</string>
+    <string name="drapeau15">Maroc</string>
+    <string name="drapeau16">Namibie</string>
+    <string name="drapeau17">Perou</string>
+    <string name="drapeau18">Portugal</string>
+    <string name="drapeau19">Roumanie</string>
+    <string name="drapeau20">Senegal</string>
+</resources>
