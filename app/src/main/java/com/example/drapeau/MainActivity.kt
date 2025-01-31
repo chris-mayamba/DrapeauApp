@@ -27,6 +27,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -35,6 +36,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.input.pointer.motionEventSpy
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -65,7 +67,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DrapeauApp(){
-    Scaffold { it ->
+    Scaffold(
+        topBar = {
+            DrapeauTopappBar()
+        }
+    ) { it ->
         LazyColumn(contentPadding = it) {
             items(flags){
                 FlagItem(
@@ -76,21 +82,7 @@ fun DrapeauApp(){
         }
 
     }
-//    val layoutDirection = LocalLayoutDirection.current
-//    Surface(
-//        modifier = Modifier
-//        .fillMaxSize()
-//        .statusBarsPadding()
-//        .padding(
-//            start = WindowInsets.safeDrawing.asPaddingValues().calculateStartPadding(layoutDirection),
-//            end = WindowInsets.safeDrawing.asPaddingValues().calculateEndPadding(layoutDirection),
-//        ),
-//    ) {
-//        DrapeauList(
-//            drapeauList = Datasource().loadDrapeau(),
-//        )
-//
-//    }
+
 }
 
 @Composable
@@ -140,14 +132,18 @@ fun FlagInformation(
     Column(modifier = modifier){
         Text(
             text = stringResource(flagName),
+            style = MaterialTheme.typography.displayMedium,
             modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
         )
         Row(modifier = modifier){
             Text(
-                text = stringResource(flagcapital)
+                text = stringResource(flagcapital),
+                style = MaterialTheme.typography.bodyLarge
+
             )
             Text(
                 text = stringResource(flagcode),
+                style = MaterialTheme.typography.bodyLarge
             )
         }
 
@@ -162,12 +158,47 @@ fun FlagPreview(){
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DrapeauTopappBar(modifier: Modifier = Modifier){
+fun DrapeauTopappBar(modifier: Modifier = Modifier) {
+    CenterAlignedTopAppBar(
+        title = {
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    modifier = Modifier
+                        .size(dimensionResource(id = R.dimen.image_size))
+                        .padding(dimensionResource(id = R.dimen.padding_small)),
+                    painter = painterResource(R.drawable.mboka),
+                    contentDescription = null
+                )
+                Text(
+                    text = stringResource(id = R.string.app_name),
+                    style = MaterialTheme.typography.displayLarge
+                )
 
+            }
+        },
+        modifier = modifier
+    )
 }
 
-
+//    val layoutDirection = LocalLayoutDirection.current
+//    Surface(
+//        modifier = Modifier
+//        .fillMaxSize()
+//        .statusBarsPadding()
+//        .padding(
+//            start = WindowInsets.safeDrawing.asPaddingValues().calculateStartPadding(layoutDirection),
+//            end = WindowInsets.safeDrawing.asPaddingValues().calculateEndPadding(layoutDirection),
+//        ),
+//    ) {
+//        DrapeauList(
+//            drapeauList = Datasource().loadDrapeau(),
+//        )
+//
+//    }
 
 //@Preview
 //@Composable

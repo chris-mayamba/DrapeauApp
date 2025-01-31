@@ -114,7 +114,7 @@ fun DrapeauTheme(
 
 
     MaterialTheme(
-        //colors = colorScheme,
+        //colors = colors,
         colorScheme = colorScheme,
         typography = Typography,
         shapes = shapes,
