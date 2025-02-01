@@ -64,16 +64,16 @@
 <!--    <string name="pays19_code">+40</string>-->
 <!--    <string name="pays20_code">+221</string>-->
 
-    <string name="pays1_desc">Ceci est une description d\'un pays +27</string>
-    <string name="pays2_desc">Ceci est une description d\'un pays +49</string>
-    <string name="pays3_desc">Ceci est une description d\'un pays +244</string>
-    <string name="pays4_desc">Ceci est une description d\'un pays +243</string>
-    <string name="pays5_desc">Ceci est une description d\'un pays +55</string>
-    <string name="pays6_desc">Ceci est une description d\'un pays +359</string>
-    <string name="pays7_desc">Ceci est une description d\'un pays +237</string>
-    <string name="pays8_desc">Ceci est une description d\'un pays +1</string>
-    <string name="pays9_desc">Ceci est une description d\'un pays +1</string>
-    <string name="pays10_desc">Ceci est une description d\'un pays +241</string>
+    <string name="pays1_desc">L\'Afrique du Sud est réputée pour sa faune exceptionnelle et ses paysages variés.</string>
+    <string name="pays2_desc">L\'Allemagne est connue pour son histoire riche et son dynamisme économique.</string>
+    <string name="pays3_desc">L\'Angola allie traditions africaines et influences portugaises dans une mosaïque culturelle.</string>
+    <string name="pays4_desc">La République démocratique du Congo se distingue par sa biodiversité et ses immenses forêts tropicales.</string>
+    <string name="pays5_desc">Le Brésil fascine par son carnaval coloré, ses plages mythiques et sa musique entraînante.</string>
+    <string name="pays6_desc">La Bulgarie  offre un patrimoine historique riche et des paysages naturels étonnants.</string>
+    <string name="pays7_desc">Le Cameroun est un creuset de cultures et de paysages, allant des plages aux montagnes.</string>
+    <string name="pays8_desc">Le Canada se distingue par ses vastes paysages naturels, son multiculturalisme et sa qualité de vie exceptionnelle.</string>
+    <string name="pays9_desc">Les États-Unis se caractérisent par leur diversité culturelle et leur influence mondiale.</string>
+    <string name="pays10_desc">Le Gabon est reconnu pour ses parcs nationaux et sa biodiversité préservée.</string>
 <!--    <string name="pays11_desc">Ceci est une description d\'un pays +27</string>-->
 <!--    <string name="pays12_desc">Ceci est une description d\'un pays +49</string>-->
 <!--    <string name="pays13_desc">Ceci est une description d\'un pays +244</string>-->
