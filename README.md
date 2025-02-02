@@ -1,1 +1,1 @@
-![Capture du projet](drapeau_capture.png)
+![Capture du projet](capture_drapeau.png)
