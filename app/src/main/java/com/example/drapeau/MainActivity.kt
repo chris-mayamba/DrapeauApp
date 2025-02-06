@@ -193,7 +193,11 @@ fun FlagInformation(
 @Composable
 fun FlagPreview(){
     DrapeauTheme(darkTheme = true){
-        DrapeauApp()
+        MyButton(
+            onClick = {
+                println("Bouton Cliqué")
+            }
+        )
     }
 }
 
@@ -222,61 +226,3 @@ fun DrapeauTopappBar(modifier: Modifier = Modifier) {
         modifier = modifier
     )
 }
-
-//    val layoutDirection = LocalLayoutDirection.current
-//    Surface(
-//        modifier = Modifier
-//        .fillMaxSize()
-//        .statusBarsPadding()
-//        .padding(
-//            start = WindowInsets.safeDrawing.asPaddingValues().calculateStartPadding(layoutDirection),
-//            end = WindowInsets.safeDrawing.asPaddingValues().calculateEndPadding(layoutDirection),
-//        ),
-//    ) {
-//        DrapeauList(
-//            drapeauList = Datasource().loadDrapeau(),
-//        )
-//
-//    }
-
-//@Preview
-//@Composable
-//private fun DrapeauCardPreview(){
-//    DrapeauCard(Drapeau(R.string.pays1, R.drawable.drapeau1));
-//}
-
-//@Composable
-//fun DrapeauList(drapeauList : List<Drapeau>, modifier: Modifier = Modifier){
-//    LazyColumn(modifier = modifier) {
-//        items(drapeauList){ drapeau ->
-//            DrapeauCard(
-//                drapeau = drapeau,
-//                modifier = Modifier.padding(8.dp)
-//            )
-//
-//        }
-//    }
-//}
-
-//@Composable
-//fun DrapeauCard(drapeau: Drapeau, modifier: Modifier = Modifier) {
-//    Card(modifier = modifier){
-//        Column{
-//            Image(
-//                painter = painterResource(drapeau.imageResourceID),
-//                contentDescription = stringResource(drapeau.stringResourceID),
-//                modifier = Modifier
-//                    .fillMaxSize()
-//                    .height(194.dp),
-//                contentScale = ContentScale.Crop
-//
-//            )
-//            Text(
-//                text = LocalContext.current.getString(drapeau.stringResourceID),
-//                modifier = Modifier.padding(16.dp),
-//                style = MaterialTheme.typography.headlineSmall
-//            )
-//        }
-//    }
-//
-//}
