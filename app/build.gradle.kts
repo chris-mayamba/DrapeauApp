@@ -48,6 +48,13 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
+
+    //viewModel
+    implementation(libs.androidx.lifecycle.viewmodel)
+    
+    //Navigation
+    implementation(libs.androidx.navigation)
+
     implementation(libs.androidx.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -43,6 +43,7 @@ import androidx.compose.ui.unit.dp
 //import com.example.drapeau.data.Datasource
 import com.example.drapeau.data.Flag
 import com.example.drapeau.data.flags
+import com.example.drapeau.navigation.NavigationScreen
 import com.example.drapeau.ui.theme.DrapeauTheme
 
 class MainActivity : ComponentActivity() {
@@ -51,7 +52,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DrapeauTheme {
-                    DrapeauApp()
+                NavigationScreen()
             }
         }
     }
@@ -72,9 +73,7 @@ fun DrapeauApp(){
                 )
             }
         }
-
     }
-
 }
 
 @Composable
@@ -82,7 +81,6 @@ fun FlagItem(
     flag : Flag,
     modifier: Modifier = Modifier
     ){
-
     val expanded = remember { mutableStateOf(false) }
 
     Card(
@@ -96,7 +94,6 @@ fun FlagItem(
                 .padding(dimensionResource(id = R.dimen.padding_small)),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
-
         ) {
             Row(
                 modifier = Modifier.weight(1f),
@@ -117,17 +114,12 @@ fun FlagItem(
                     Icons.Filled.KeyboardArrowUp
                 else
                     Icons.Filled.KeyboardArrowDown,
-
                 contentDescription = if (expanded.value) "Réduire"
                 else "Afficher",
                 modifier = Modifier.padding(start = 8.dp)
             )
-
         }
-
-
     }
-
 }
 
 @Composable
@@ -192,8 +184,8 @@ fun FlagInformation(
 @Preview
 @Composable
 fun FlagPreview(){
-    DrapeauTheme(darkTheme = true){
-        MyButton(
+    DrapeauTheme(darkTheme = false){
+        HomeScreen(
             onClick = {
                 println("Bouton Cliqué")
             }
