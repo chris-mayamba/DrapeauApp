@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -26,7 +27,7 @@ import androidx.compose.ui.unit.sp
 fun HomeScreen(onClick: () -> Unit) {
     Box(
         modifier = Modifier.fillMaxSize()
-            .background(MaterialTheme.colorScheme.onBackground),
+            .background(MaterialTheme.colorScheme.onBackground).height(44.dp),
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -41,11 +42,14 @@ fun HomeScreen(onClick: () -> Unit) {
 
             Button(
                 onClick = onClick,
+                shape = RoundedCornerShape(16.dp),
                 modifier = Modifier
-                    .padding(32.dp)
+                    .padding(horizontal = 32.dp)
+
                     .fillMaxWidth()
             ) {
-                Text("Voir les pays", style = MaterialTheme.typography.displayMedium)
+                Text("Voir les pays",
+                    style = MaterialTheme.typography.displayMedium)
             }
         }
     }
