@@ -24,10 +24,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun HomeScreen(onClick: () -> Unit) {
+fun HomeScreen(
+    onNavigateToCountries: () -> Unit,
+    onNavigateToAfrica: () -> Unit
+) {
     Box(
-        modifier = Modifier.fillMaxSize()
-            .background(MaterialTheme.colorScheme.onBackground).height(44.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.onBackground)
+            .padding(16.dp), // Ajout d'un padding général
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -41,15 +46,29 @@ fun HomeScreen(onClick: () -> Unit) {
             )
 
             Button(
-                onClick = onClick,
+                onClick = onNavigateToCountries,
                 shape = RoundedCornerShape(16.dp),
                 modifier = Modifier
                     .padding(horizontal = 32.dp)
-
                     .fillMaxWidth()
             ) {
-                Text("Voir les pays",
-                    style = MaterialTheme.typography.displayMedium)
+                Text(
+                    text = "Voir les pays",
+                    style = MaterialTheme.typography.displayMedium
+                )
+            }
+
+            Button(
+                onClick = onNavigateToAfrica,
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier
+                    .padding(horizontal = 32.dp)
+                    .fillMaxWidth()
+            ) {
+                Text(
+                    text = "Voir les pays africains",
+                    style = MaterialTheme.typography.displayMedium
+                )
             }
         }
     }

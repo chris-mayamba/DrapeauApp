@@ -28,6 +28,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -72,10 +73,23 @@ fun DrapeauApp(){
                     modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
                 )
             }
+
         }
     }
 }
 
+@Composable
+fun SearchBar(query: String, onQueryChanged: (String) -> Unit) {
+    TextField(
+        value = query,
+        onValueChange = onQueryChanged,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp),
+        placeholder = { Text("Rechercher un pays...") },
+        singleLine = true
+    )
+}
 @Composable
 fun FlagItem(
     flag : Flag,
@@ -186,9 +200,13 @@ fun FlagInformation(
 fun FlagPreview(){
     DrapeauTheme(darkTheme = false){
         HomeScreen(
-            onClick = {
-                println("Bouton Cliqué")
-            }
+            onNavigateToCountries = {
+                println("Pays")
+            },
+            onNavigateToAfrica = {
+                println("Afrique")
+        }
+
         )
     }
 }

@@ -8,18 +8,25 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.drapeau.DrapeauApp
 import com.example.drapeau.HomeScreen
+import com.example.drapeau.ui.theme.CountryApp
 
 
 @Composable
-fun NavigationScreen(){
+fun NavigationScreen() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
         composable("home") {
-            HomeScreen(onClick = { navController.navigate("flag") })
+            HomeScreen(
+                onNavigateToCountries = { navController.navigate("flag") },
+                onNavigateToAfrica = { navController.navigate("africa") }
+            )
         }
-
         composable("flag") {
-            DrapeauApp()
+            CountryApp()
+        }
+        composable("africa") {
+            // Affichage de l'écran pour l'Afrique
         }
     }
 }
+
