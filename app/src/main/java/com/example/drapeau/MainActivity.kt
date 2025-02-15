@@ -198,7 +198,7 @@ fun FlagInformation(
 @Preview
 @Composable
 fun FlagPreview(){
-    DrapeauTheme(darkTheme = false){
+    DrapeauTheme(){
         HomeScreen(
             onNavigateToCountries = {
                 println("Pays")

@@ -31,7 +31,6 @@ fun HomeScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.onBackground)
             .padding(16.dp), // Ajout d'un padding général
         contentAlignment = Alignment.Center
     ) {

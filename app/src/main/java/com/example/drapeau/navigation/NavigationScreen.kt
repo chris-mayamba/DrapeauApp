@@ -22,11 +22,12 @@ fun NavigationScreen() {
             )
         }
         composable("flag") {
-            CountryApp()
+            CountryApp(region = null) // Affiche tous les pays
         }
         composable("africa") {
-            // Affichage de l'écran pour l'Afrique
+            CountryApp(region = "africa") // Affiche uniquement les pays d'Afrique
         }
     }
 }
+
 
