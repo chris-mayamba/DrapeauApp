@@ -31,7 +31,7 @@ fun HomeScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp), // Ajout d'un padding général
+            .padding(16.dp),
         contentAlignment = Alignment.Center
     ) {
         Column(
